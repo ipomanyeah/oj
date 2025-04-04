@@ -1,4 +1,3 @@
-// https://lqdoj.edu.vn/problem/cnt001
 #include <bits/stdc++.h>
 typedef long long ll;
 typedef long double ld;
@@ -14,22 +13,26 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
+void solve() {
+  int a, b, n;
+  cin >> a >> b >> n;
+  int i = min(a, b);
+  int curr = i;
+  int cnt = i;
+  while (cnt <= n + 1) {
+    if (i % a == 0 || i % b == 0) {
+      curr = i;
+      cnt++;
+    }
+    i++;
+  }
+  cout << curr;
+}
+
 int main() {
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  cout.tie(0);
-  int n;
-  cin >> n;
-  map<int, int> mp;
-  v<int> a;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    a.push_back(k);
-    mp[k]++;
+  int t;
+  cin >> t;
+  while (t--) {
+    solve();
   }
-  for (int i = 0; i < n; i++) {
-    cout << a[i] << " " << mp[a[i]] << el;
-  }
-  return 0;
 }

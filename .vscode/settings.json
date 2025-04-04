@@ -95,6 +95,11 @@
     "xtree": "cpp",
     "xutility": "cpp",
     "cinttypes": "cpp",
-    "cstdint": "cpp"
+    "cstdint": "cpp",
+    "any": "cpp",
+    "filesystem": "cpp",
+    "mdspan": "cpp",
+    "ranges": "cpp",
+    "variant": "cpp"
   }
 }

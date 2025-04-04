@@ -1,4 +1,4 @@
-// https://lqdoj.edu.vn/problem/cnt001
+// https://lqdoj.edu.vn/problem/22thtmbc1
 #include <bits/stdc++.h>
 typedef long long ll;
 typedef long double ld;
@@ -14,22 +14,35 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
+void check(ull k) {
+  string sk = to_string(k);
+  ull n = sk.length();
+
+  for (ull i = k + 1; i <= (ull)10e9; i++) {
+    string ys = to_string(i);
+    set<char> a;
+    for (char c : ys) {
+      a.insert(c);
+    }
+    if (ys.length() > n && a.size() == ys.length()) {
+      cout << i << el;
+      return;
+    } else if (ys.length() == n && a.size() == ys.length()) {
+      cout << i << el;
+      return;
+    }
+  }
+}
+
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
   cout.tie(0);
-  int n;
+  ull n;
   cin >> n;
-  map<int, int> mp;
-  v<int> a;
-  for (int i = 0; i < n; i++) {
-    int k;
+  while (n--) {
+    ull k;
     cin >> k;
-    a.push_back(k);
-    mp[k]++;
+    check(k);
   }
-  for (int i = 0; i < n; i++) {
-    cout << a[i] << " " << mp[a[i]] << el;
-  }
-  return 0;
 }

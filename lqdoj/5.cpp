@@ -1,4 +1,3 @@
-// https://lqdoj.edu.vn/problem/cnt001
 #include <bits/stdc++.h>
 typedef long long ll;
 typedef long double ld;
@@ -15,21 +14,12 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  cout.tie(0);
-  int n;
-  cin >> n;
-  map<int, int> mp;
-  v<int> a;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    a.push_back(k);
-    mp[k]++;
-  }
-  for (int i = 0; i < n; i++) {
-    cout << a[i] << " " << mp[a[i]] << el;
-  }
-  return 0;
+  ull a, b;
+  cin >> a >> b;
+  for (ull i = gcd(a, b) - 1; i >= 1; i--) {
+    if (a % i == 0 && b % i == 0) {
+      cout << i;
+      return 0;
+    }
+  } cout << -1;
 }
