@@ -14,20 +14,35 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  int n;
-  cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
+  int l, m, n;
+  cin >> l >> m >> n;
+  if (l == 3) {
+    if (m == 2) {
+      if (n >= 100) {
+        cout << n * (350);
+      } else {
+        cout << n * (400);
+      }
+    } else {
+      if (n >= 100) {
+        cout << n * (250);
+      } else {
+        cout << n * (300);
+      }
+    }
+  } else {
+if (m == 2) {
+      if (n >= 100) {
+        cout << n * (700);
+      } else {
+        cout << n * (800);
+      }
+    } else {
+      if (n >= 100) {
+        cout << n * (500);
+      } else {
+        cout << n * (600);
+      }
     }
   }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
 }

@@ -16,18 +16,14 @@ char el = '\n';
 int main() {
   int n;
   cin >> n;
-  int l = -1, r = -1;
+  v<int> a(n);
   for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
-    }
+    cin >> a[i];
   }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  int mxgc = 0;
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = i + 1; j < n; j++) {
+      mxgc = max(mxgc, gcd(a[i], a[j]));
+    }
+  } cout << mxgc;
 }

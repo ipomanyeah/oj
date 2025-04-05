@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cctype>
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
@@ -14,20 +15,21 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  int n;
-  cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
+  string s;
+  cin >> s;
+  int cntup = 0;
+  int cntdown = 0;
+  for (char c: s) {
+    if (toupper(s) == s) {
+      // is upper;
+      cntup++;
+    } else {
+      cntdown++;
     }
   }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  if (cntdown >= cntup) {
+    for (int i = 0; i < s.length(); i++) {
+      s[i] = tolower(s[i]);
+    }
+}
 }

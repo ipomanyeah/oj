@@ -13,21 +13,37 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
+bool pf(int n) {
+  if (n < 0) {
+    return 0;
+  }
+  int root = sqrt(n);
+  return n == root*root;
+}
+
+bool isf(int n) {
+  return pf(5*n*n + 4) || pf(5*n*n - 4);
+}
+
+int sd(int n) {
+  string ns = to_string(n);
+  int sum = 0;
+  for (char c : ns) {
+    sum += c - '0';
+  }
+  return sum;
+}
+
 int main() {
+  freopen("BNUM.INP", "r", stdin);
+  freopen("BNUM.OUT", "w", stdout);
   int n;
   cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
+  int cnt = 0;
+  for (int i = 1; i <= n; i++) {
+    if (pf(i) && isf(sd(i))) {
+      cnt++;
     }
   }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  cout << cnt;
 }

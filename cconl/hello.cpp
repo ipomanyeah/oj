@@ -14,20 +14,7 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  int n;
-  cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
-    }
-  }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  string s;
+  getline(cin, s);
+  cout << "Hello " << s;
 }

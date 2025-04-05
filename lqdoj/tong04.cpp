@@ -14,20 +14,10 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  int n;
-  cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
-    }
-  }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  ull l, r;
+  cin >> l >> r;
+  ull count = (r / 10) - (l / 10);
+  if (r % 10 == 0) count++;
+  cout << count;
+  return 0;
 }

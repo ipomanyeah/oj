@@ -13,21 +13,16 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
+ull MOD = (ull)10e9 + 7;
+
 int main() {
-  int n;
-  cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
-    }
+  ull l, r;
+  cin >> l >> r;
+  ull sum = 0;
+  for (ull i = l; i <= r; i++) {
+    string s = string(i, '1');
+    sum += (stoull(s) % MOD);
+    sum %= MOD;
   }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  cout << sum;
 }

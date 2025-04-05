@@ -16,18 +16,10 @@ char el = '\n';
 int main() {
   int n;
   cin >> n;
-  int l = -1, r = -1;
-  for (int i = 0; i < n; i++) {
-    int k;
-    cin >> k;
-    if (k > 0) {
-      if (l == -1) {
-        l = i;
-      } r = i;
-    }
+  int sum = 0;
+  while (n > 0) {
+    n /= 5;
+    sum += n;
   }
-  if (l == -1) {
-    cout << -1 << " " << -1;
-  } else
-  cout << l + 1 << " " << r + 1;
+  cout << sum;
 }

@@ -100,6 +100,24 @@
     "filesystem": "cpp",
     "mdspan": "cpp",
     "ranges": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "barrier": "cpp",
+    "execution": "cpp",
+    "expected": "cpp",
+    "generator": "cpp",
+    "hash_map": "cpp",
+    "hash_set": "cpp",
+    "latch": "cpp",
+    "memory_resource": "cpp",
+    "numbers": "cpp",
+    "print": "cpp",
+    "semaphore": "cpp",
+    "source_location": "cpp",
+    "span": "cpp",
+    "spanstream": "cpp",
+    "stacktrace": "cpp",
+    "stdfloat": "cpp",
+    "strstream": "cpp",
+    "syncstream": "cpp"
   }
 }
