@@ -13,4 +13,19 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  int n;
+  cin >> n;
+  string s;
+  cin >> s;
+  v<int> s0(n + 1, 0);
+  v<int> s1(n + 1, 0);
+  for (int i = 0; i < n; i++) {
+    s0[i + 1] = s0[i] + !(s[i] - '0');
+    s1[i + 1] = s1[i] + (s[i] - '0');
+  }
+
+  for (int i = 0; i < n - 1; i++) {
+    for (int )
+  }
+}

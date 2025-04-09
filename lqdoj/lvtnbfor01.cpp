@@ -13,4 +13,9 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  ull n;
+  cin >> n;
+  ull sum = (n * (n + 1) * (2*n + 1)) / 6;
+  cout << sum;
+}

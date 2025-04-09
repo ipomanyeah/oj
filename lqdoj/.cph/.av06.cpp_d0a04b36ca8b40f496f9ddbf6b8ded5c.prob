@@ -1,0 +1,1 @@
+{"name":"Local: av06","url":"/home/hp/Documents/oj/lqdoj/av06.cpp","tests":[{"id":1744101884155,"input":"7\n7 -6 -4 19 -22 51 -82 ","output":"2 7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp/Documents/oj/lqdoj/av06.cpp","group":"local","local":true}

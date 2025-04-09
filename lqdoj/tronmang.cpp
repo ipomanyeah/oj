@@ -13,4 +13,17 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  freopen("TRONMANG.INP", "r", stdin);
+  freopen("TRONMANG.OUT", "w", stdout);
+  int n, m;
+  cin >> n >> m;
+  v<int> a(n + m);
+  for (int i = 0; i < n + m; i++) {
+    cin >> a[i];
+  }
+  sort(all(a));
+  for (int i : a) {
+    cout << i << " ";
+  }
+}

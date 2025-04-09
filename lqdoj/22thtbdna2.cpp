@@ -23,6 +23,8 @@ bool check(ull n) {
 }
 
 int main() {
+  freopen("dx.inp", "r", stdin);
+  freopen("dx.out", "w", stdout);
   ull n;
   cin >> n;
   for (ull i = 1;; i++) {

@@ -13,4 +13,8 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  ull n;
+  cin >> n;
+  cout << n * n;
+}

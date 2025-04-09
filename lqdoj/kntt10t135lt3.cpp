@@ -13,4 +13,20 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  string s;
+  getline(cin, s);
+  cin.ignore();
+  int n;
+  cin >> n;
+  if (n == 0) {
+    for (int i = 0; i < s.length(); i++) {
+      s[i] = toupper(s[i]);
+    }
+  } else {
+    for (int i = 0; i < s.length(); i++) {
+      s[i] = tolower(s[i]);
+    }
+  }
+  cout << s;
+}

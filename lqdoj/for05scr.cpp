@@ -13,4 +13,25 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+ull sdiv(ull n) {
+  ull sum = 0;
+  for (int i = 1; i*i <= n; i++) {
+    if (n % i == 0) {
+      if (i*i == n) {
+        sum += i;
+      } else {
+        sum += i;
+        sum += n / i;
+      }
+    }
+  }
+  return sum;
+}
+
+int main() {
+  ull n;
+  cin >> n;
+  if (sdiv(n) / 2 == n) {
+    cout << "YES";
+  } else cout << "NO";
+}

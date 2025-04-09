@@ -13,4 +13,17 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  int n;
+  string s;
+  cin >> n;
+  cin.ignore();
+  getline(cin, s);
+  for (int i = 0; i < s.length(); i++) {
+    if (s[i] == ' ') {
+      continue;
+    }
+    s[i] = 'A' + (s[i] - 'A' + n) % 26;
+  }
+  cout << s;
+}

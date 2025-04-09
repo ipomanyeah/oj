@@ -13,4 +13,21 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  ull n;
+  cin >> n;
+  ull cnt = 0;
+  ull sum = 0;
+  for (int i = 1; i*i <= n; i++) {
+    if (n % i == 0) {
+      if (i*i == n) {
+        cnt++;
+      } else {
+        cnt += 2;
+        sum += n / i;
+      }
+      sum += i;
+    }
+  }
+  cout << cnt << " " << sum;
+}

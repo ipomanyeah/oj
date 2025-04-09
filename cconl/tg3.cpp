@@ -13,4 +13,25 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-int main() {}
+int main() {
+  int n;
+  cin >> n;
+  while (n--) {
+    int hh = 8;
+    int min = 0;
+    int k;
+    cin >> k;
+    int mincald = k % 60;
+    int hcald = k / 60;
+    hh += hcald;
+    min += mincald;
+    string hhs = to_string(hh);
+    string mins = to_string(min);
+    if (hhs.size() == 1) {
+      hhs = '0' + hhs;
+    } if (mins.size() == 1) {
+      mins = '0' + mins;
+    }
+    cout << hhs << ":" << mins << el;
+  }
+}
