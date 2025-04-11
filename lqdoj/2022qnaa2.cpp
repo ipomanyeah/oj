@@ -14,16 +14,13 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  freopen("DEMSO.INP", "r", stdin);
-  freopen("DEMSO.OUT", "w", stdout);
-  string s;
-  cin >> s;
-  int n = s.size();
-  int cnt = 0;
-  for (int i = 0; i < n; i++) {
-    if (isdigit(s[i])) {
-      cnt++;
-    }
+  ull a, b;
+  cin >> a >> b;
+  ull cnt = 0;
+  ull sum = (b - a + 1) * (a + b) / 2;
+  cout << sum << el;
+  for (int i = a; i <= b; i += a) {
+    cnt++;
   }
   cout << cnt;
 }

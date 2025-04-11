@@ -13,17 +13,32 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
+int dig(int n) {
+  int sum = 0;
+  string ns = to_string(n);
+  for (char c : ns) {
+    sum += c - '0';
+  }
+  return sum;
+}
+
 int main() {
-  freopen("DEMSO.INP", "r", stdin);
-  freopen("DEMSO.OUT", "w", stdout);
-  string s;
-  cin >> s;
-  int n = s.size();
-  int cnt = 0;
-  for (int i = 0; i < n; i++) {
-    if (isdigit(s[i])) {
-      cnt++;
+  int a, b;
+  cin >> a >> b;
+  int gc = gcd(a, b);
+  int mx = 0;
+  int curr, curr2;
+  for (int i = 1; i*i <= gc; i++) {
+    if (gc % i == 0) {
+      if (i*i == gc) {
+        curr = dig(i);
+      } else {
+        curr = dig(i);
+        curr2 = dig(gc / i);
+        curr = max(curr, curr2);
+      }
+      mx = max(mx, curr);
     }
   }
-  cout << cnt;
+  cout << mx;
 }

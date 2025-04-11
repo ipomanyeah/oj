@@ -13,17 +13,19 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
+ull mod = 1e9 + 7;
+
 int main() {
-  freopen("DEMSO.INP", "r", stdin);
-  freopen("DEMSO.OUT", "w", stdout);
-  string s;
-  cin >> s;
-  int n = s.size();
-  int cnt = 0;
-  for (int i = 0; i < n; i++) {
-    if (isdigit(s[i])) {
-      cnt++;
+  ull a, b;
+  cin >> a >> b;
+  a %= mod;
+  ull res = 1;
+  while (b > 0) {
+    if (b & 1) {
+      res = res * a % mod;
     }
+    a = a * a % mod;
+    b >>= 1;
   }
-  cout << cnt;
+  cout << res;
 }

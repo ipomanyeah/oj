@@ -14,16 +14,21 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  freopen("DEMSO.INP", "r", stdin);
-  freopen("DEMSO.OUT", "w", stdout);
   string s;
-  cin >> s;
-  int n = s.size();
-  int cnt = 0;
-  for (int i = 0; i < n; i++) {
-    if (isdigit(s[i])) {
-      cnt++;
+  while (cin >> s) {
+    int l = 0;
+    int r = s.length() - 1;
+    int cnt = 0;
+    while (l < r) {
+      if (s[l] != s[r]) cnt++;
+      l++;
+      r--;
     }
+    if (cnt <= 2) {
+      cout << "YES";
+    } else {
+      cout << "NO";
+    }
+    cout << el;
   }
-  cout << cnt;
 }

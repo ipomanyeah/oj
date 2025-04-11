@@ -14,16 +14,17 @@ using namespace std;
 char el = '\n';
 
 int main() {
-  freopen("DEMSO.INP", "r", stdin);
-  freopen("DEMSO.OUT", "w", stdout);
   string s;
   cin >> s;
-  int n = s.size();
+  cout << s << el;
   int cnt = 0;
-  for (int i = 0; i < n; i++) {
-    if (isdigit(s[i])) {
+  for (char c : s) {
+    if (c == '2') {
       cnt++;
     }
   }
-  cout << cnt;
+  cout << cnt << el;
+  cout << ((s[0] == s.back()) ? "YES" : "NO") << el;
+  reverse(all(s));
+  cout << s;
 }
