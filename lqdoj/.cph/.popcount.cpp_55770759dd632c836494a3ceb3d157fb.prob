@@ -1,0 +1,1 @@
+{"name":"Local: popcount","url":"/home/hp/oj/lqdoj/popcount.cpp","tests":[{"id":1744953194335,"input":"15","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp/oj/lqdoj/popcount.cpp","group":"local","local":true}
