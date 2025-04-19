@@ -29,4 +29,13 @@ void desync() {
 
 int main() {
   desync();
+  string s;
+  cin >> s;
+  int cnt = 0;
+  for (char c : s) {
+    if (c == '9') {
+      cnt++;
+    }
+  }
+  cout << cnt;
 }

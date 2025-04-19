@@ -29,4 +29,14 @@ void desync() {
 
 int main() {
   desync();
+  string s;
+  cin >> s;
+  int n;
+  cin >> n;
+  while (n--) {
+    int l, r;
+    cin >> l >> r;
+    swap(s[l - 1], s[r - 1]);
+  }
+  cout << s;
 }

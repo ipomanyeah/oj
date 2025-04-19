@@ -29,4 +29,13 @@ void desync() {
 
 int main() {
   desync();
+  // open("MAYMAN.INP", "MAYMAN.OUT");
+  int a, b, c;
+  cin >> a >> b >> c;
+  int sum = ((a % 10) + (b % 10)) % 10;
+  if (sum % c == 0) {
+    cout << sum;
+  } else {
+    cout << sum % c;
+  }
 }

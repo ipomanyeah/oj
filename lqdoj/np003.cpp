@@ -29,4 +29,29 @@ void desync() {
 
 int main() {
   desync();
+  v<ull> cb(10e6 + 1);
+  for (int i = 0; i <= 10e6; i++) {
+    cb[i] = i*i*i;
+  }
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    int l = 0;
+    int r = 10e6;
+    while (l <= r) {
+      int m = (r - l) / 2;
+      if (cb[m] < n) {
+        l = m + 1;
+      } else if (cb[m] > n) {
+        r = m - 1;
+      } else {
+        // found;
+        cout << "YES";
+      }
+    }
+    cout << "NO";
+    cout << el;
+  }
 }

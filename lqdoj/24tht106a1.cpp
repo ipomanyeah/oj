@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
+typedef long long ll;
+typedef long double ld;
+typedef unsigned long long ull;
 #define all(a) (a).begin(), (a).end()
-using ll = long long;
-using ull = unsigned long long;
-using ld = long double;
-using dd = double;
-using fl = float;
 template <typename T> using v = std::vector<T>;
 template <typename T> using umset = std::unordered_multiset<T>;
 template <typename T> using mset = std::multiset<T>;
@@ -15,18 +13,17 @@ template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
 char el = '\n';
 
-void open(const string input, const string output) {
-  const char * in = input.c_str();
-  const char * out = output.c_str();
-  freopen(in, "r", stdin);
-  freopen(out, "w", stdout);
-}
-
-void desync() {
-  ios_base::sync_with_stdio(NULL);
-  cin.tie(NULL); cout.tie(NULL);
-}
-
 int main() {
-  desync();
+  int k;
+  cin >> k;
+  if (k == 2) {
+    cout << 0;
+    return 0;
+  } else {
+    if (k < 2) {
+      cout << 12 - k;
+    } else {
+      cout << k - 2;
+    }
+  }
 }

@@ -29,4 +29,23 @@ void desync() {
 
 int main() {
   desync();
+  ull n, m, k;
+  cin >> n >> m >> k;
+  v<ull> a(n);
+  v<ull> b(m);
+  for (ull i = 0; i < n; i++) {
+    cin >> a[i];
+  }
+  for (ull i = 0; i < m; i++) {
+    cin >> b[i];
+  }
+  ull cnt = 0;
+  for (ull i = 0; i < n; i++) {
+    for (ull j = 0; j < m; j++) {
+      if (a[i] + b[j] <= k) {
+        cnt++;
+      }
+    }
+  }
+  cout << cnt;
 }

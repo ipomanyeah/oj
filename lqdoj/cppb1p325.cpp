@@ -29,4 +29,16 @@ void desync() {
 
 int main() {
   desync();
+  int n;
+  cin >> n;
+  int cnt = 0;
+  while (n--) {
+    int k;
+    cin >> k;
+    int sq = sqrt(k);
+    if (sq*sq == k) {
+      cnt++;
+    }
+  }
+  cout << cnt;
 }

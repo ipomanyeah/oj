@@ -27,6 +27,26 @@ void desync() {
   cin.tie(NULL); cout.tie(NULL);
 }
 
+bool pf(ull k) {
+  ull sq = sqrt(k);
+  return sq*sq == k;
+}
+
 int main() {
   desync();
+  int n;
+  cin >> n;
+  v<ull> a(n);
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
+  }
+  int cnt = 0;
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = i + 1; j < n; j++) {
+      if (pf(a[i] * a[j])) {
+        cnt++;
+      }
+    }
+  }
+  cout << cnt;
 }
