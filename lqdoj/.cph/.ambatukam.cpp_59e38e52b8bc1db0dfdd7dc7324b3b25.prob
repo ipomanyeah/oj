@@ -1,0 +1,1 @@
+{"name":"Local: ambatukam","url":"/home/hp-masara/oj/lqdoj/ambatukam.cpp","tests":[{"id":1745123570078,"input":"5\n1 2 3 4 5","output":"1 3 6 10 15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp-masara/oj/lqdoj/ambatukam.cpp","group":"local","local":true}

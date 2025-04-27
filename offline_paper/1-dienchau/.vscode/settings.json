@@ -4,11 +4,5 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  },
-  "files.associations": {
-    "iostream": "cpp",
-    "cmath": "cpp",
-    "regex": "cpp",
-    "functional": "cpp"
   }
 }
