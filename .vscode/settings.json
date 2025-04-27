@@ -1,14 +1,3 @@
 {
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "files.associations": {
-    "iostream": "cpp",
-    "cmath": "cpp",
-    "regex": "cpp",
-    "functional": "cpp"
-  }
+    "C_Cpp.default.compilerPath": "cl.exe"
 }
