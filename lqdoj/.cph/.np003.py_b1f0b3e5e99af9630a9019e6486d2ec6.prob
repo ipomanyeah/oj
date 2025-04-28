@@ -1,1 +1,0 @@
-{"name":"Local: np003","url":"/home/hp-masara/oj/lqdoj/np003.py","tests":[{"id":1745122120246,"input":"5 \n2 \n8 \n4\n27\n1000 ","output":"NO\nYES\nNO\nYES\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp-masara/oj/lqdoj/np003.py","group":"local","local":true}

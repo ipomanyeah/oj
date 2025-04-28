@@ -1,1 +1,0 @@
-{"name":"Local: findmaxdigitsum","url":"/home/hp/oj/lqdoj/findmaxdigitsum.cpp","tests":[{"id":1744873228536,"input":"5\n123 4567 89 10000 5","output":"5\n22"},{"id":1744873243719,"input":"3\n8 999 100","output":"3\n27"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp/oj/lqdoj/findmaxdigitsum.cpp","group":"local","local":true}

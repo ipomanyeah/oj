@@ -1,1 +1,0 @@
-{"name":"Local: palinstr01","url":"/home/hp/Documents/oj/lqdoj/palinstr01.cpp","tests":[{"id":1744288358471,"input":"zcxxxc\nxxczxx\nzxcvbn ","output":"YES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp/Documents/oj/lqdoj/palinstr01.cpp","group":"local","local":true}

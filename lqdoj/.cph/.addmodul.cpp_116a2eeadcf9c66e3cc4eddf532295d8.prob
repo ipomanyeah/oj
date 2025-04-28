@@ -1,1 +1,0 @@
-{"name":"Local: addmodul","url":"c:\\Users\\hp-masara\\Documents\\oj\\oj\\lqdoj\\addmodul.cpp","tests":[{"id":1745769957664,"input":"2\n\n+ 7\n- 508","output":"2004010000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\hp-masara\\Documents\\oj\\oj\\lqdoj\\addmodul.cpp","group":"local","local":true}

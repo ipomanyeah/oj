@@ -1,1 +1,0 @@
-{"name":"Local: 2022ldoa2","url":"/home/hp/oj/lqdoj/2022ldoa2.cpp","tests":[{"id":1744876823831,"input":"2022\n8\n5","output":"4088444"},{"id":1744876827083,"input":"310\n20\n14","output":"95820"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hp/oj/lqdoj/2022ldoa2.cpp","group":"local","local":true}
