@@ -1,18 +1,44 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <cmath>
+#include <map>
+#include <unordered_map>
+#include <set>
+#include <unordered_set>
+#include <queue>
+#include <stack>
+#include <deque>
+#include <numeric>
+#include <bitset>
+#include <limits>
+#include <iomanip>
+#include <sstream>
+#include <tuple>
+#include <functional>
+
 #define all(a) (a).begin(), (a).end()
+#define rall(a) (a).rbegin(), (a).rend()
+#define call(a, n) a, a + n
+#define ff first
+#define ss second
+
 using ll = long long;
 using ull = unsigned long long;
 using ld = long double;
 using dd = double;
 using fl = float;
-template <typename T> using v = std::vector<T>;
-template <typename T> using umset = std::unordered_multiset<T>;
-template <typename T> using mset = std::multiset<T>;
-template <typename T> using uset = std::unordered_set<T>;
-template <typename T, typename F> using p = std::pair<T, F>;
-template <typename T, typename F> using umap = std::unordered_map<T, F>;
-template <typename T, typename F> using mmap = std::multimap<T, F>;
 using namespace std;
+
+template <typename T> using v = vector<T>;
+template <typename T> using umset = unordered_multiset<T>;
+template <typename T> using mset = multiset<T>;
+template <typename T> using uset = unordered_set<T>;
+template <typename T, typename F> using p = pair<T, F>;
+template <typename T, typename F> using umap = unordered_map<T, F>;
+template <typename T, typename F> using mmap = multimap<T, F>;
+
 char el = '\n';
 
 void open(const string input, const string output) {
@@ -27,13 +53,27 @@ void desync() {
   cin.tie(NULL); cout.tie(NULL);
 }
 
+struct Point {
+  int x, y, z;
+};
+
+bool comppoints(Point& a, Point& b) {
+  if (a.x != b.x) {
+    return a.x < b.x;
+  } if (a.y != b.y) {
+    return a.y < b.y;
+  } return a.z < b.z;
+}
+
 int main() {
-  desync();
   int n;
   cin >> n;
+  v<Point> a(n);
   for (int i = 0; i < n; i++) {
-    int x, y, z;
-    cin >> x >> y >> z;
-    
+    cin >> a[i].x >> a[i].y >> a[i].z;
+  }
+  sort(all(a), comppoints);
+  for (auto i : a) {
+    cout << i.x << " " << i.y << " " << i.z << el;
   }
 }

@@ -1,0 +1,1 @@
+{"name":"Local: addmodul","url":"c:\\Users\\hp-masara\\Documents\\oj\\oj\\lqdoj\\addmodul.py","tests":[{"id":1745770774488,"input":"2\n\n+ 7\n- 508","output":"2004010000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\hp-masara\\Documents\\oj\\oj\\lqdoj\\addmodul.py","group":"local","local":true}
