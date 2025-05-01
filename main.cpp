@@ -55,5 +55,9 @@ void desync() {
 
 int main() {
   desync();
-  cout << "Hello World";
+  int n = 9;
+  for (int i = 0; i < n; i++) {
+    cout << i << " ";
+  }
+  cout << "\nHello World";
 }
